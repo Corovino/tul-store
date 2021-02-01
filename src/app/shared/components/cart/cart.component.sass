@@ -1,0 +1,125 @@
+
+@import "src/scss/variables"
+
+*, *:before, *:after 
+  box-sizing: border-box
+
+.container 
+  margin: auto
+  width: auto
+
+.badge 
+    background-color: $tul_gr_m
+    border-radius: 10px
+    color: white
+    display: inline-block
+    font-size: 12px
+    line-height: 1
+    padding: 6px 9px
+    text-align: center
+    vertical-align: middle
+    white-space: nowrap
+
+.shopping-cart 
+  background: white
+  width: 320px
+  position: relative
+  border-radius: 3px
+  padding: 20px
+  
+  
+  .shopping-cart-header 
+    border-bottom: 1px solid #E8E8E8
+    padding-bottom: 15px
+    
+    .shopping-cart-total 
+      float: right
+      .lighter-text,
+      .main-color-text
+        color: $tul_gr_m
+        font-weight: 600
+
+    
+  
+  
+  .shopping-cart-items 
+    
+    padding-top: 20px
+    li 
+       margin-bottom: 18px
+      
+    img 
+      float: left
+      margin-right: 12px
+      width: 25%
+    
+    .item-name 
+      display: block
+      font-size: 16px
+    
+    .item-price 
+      color: $tul_gr_m
+      margin-right: 8px
+    
+    .item-quantity 
+      color: $tul-green
+    .item-delete
+      border: 2px solid  $tul_gr_m
+      color: $tul_gr_m
+      width: 145px
+      background: none
+      height: 26px
+
+
+
+.shopping-cart:after 
+  bottom: 100%
+  left: 89%
+  border: solid transparent
+  content: " "
+  height: 0
+  width: 0
+  position: absolute
+  pointer-events: none
+  border-bottom-color: white
+  border-width: 8px
+  margin-left: -8px
+
+.cart-icon 
+  color: #515783
+  font-size: 24px
+  margin-right: 7px
+  float: left
+
+.button 
+  background: $tul_gr_light
+  color: $tul_gr_m
+  text-align: center
+  padding: 12px
+  text-decoration: none
+  display: block
+  border-radius: 3px
+  font-size: 16px
+  font-weight: 600
+  margin: 25px 0 15px 0
+  
+  &:hover 
+    background: lighten($tul_gr_light, 3%)
+  
+
+.clearfix:after 
+  content: ""
+  display: table
+  clear: both
+
+li 
+  list-style-type: none
+
+ul 
+  padding-inline-start: 0px
+
+.container
+  position: absolute
+  z-index: 1
+  left: 76.5%
+

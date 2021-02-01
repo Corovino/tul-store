@@ -1,0 +1,31 @@
+@import "src/scss/variables"
+
+mat-toolbar
+    background-color: $tul_green
+    display: flex
+    justify-content: space-between
+    a
+      img
+        width: 100px
+        height: 40px
+
+.navbar 
+  position: sticky
+  top: 0
+  z-index: 1000
+  mat-icon 
+    cursor: pointer
+
+mat-sidenav 
+  width: 200px
+  cursor: pointer
+  background:$tul_green
+  position: fixed
+  top: 55px
+  z-index: 1000
+
+.mat-list-base .mat-list-item,
+a 
+  color:$default_white
+  text-decoration: none
+  cursor: pointer

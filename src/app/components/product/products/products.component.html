@@ -1,0 +1,29 @@
+<mat-card-header>
+    <mat-card-title>
+      <a [routerLink]="['/product', product.id]">
+        {{ product.tittle }}
+      </a>
+    </mat-card-title>
+</mat-card-header>
+<div class="card-content-img">
+  <img matCardImage [src]="product.image" />
+</div>
+<mat-card-content>
+  <p class="price">
+    ${{ product.price }}
+  </p>
+  <p class="description">
+    {{ product.description }}
+  </p>
+</mat-card-content>
+<mat-divider></mat-divider>
+<mat-card-actions>
+  <mat-chip-list>
+    <mat-card-content>
+      <mat-chip *ngFor="let tag of product.tag" [ngClass]="tag">
+        {{ tag }}
+      </mat-chip>
+    </mat-card-content>
+    <button class="button"   (click)="addCartProduct.emit(product)">Añadir al carrito</button>
+  </mat-chip-list>
+</mat-card-actions>

@@ -1,0 +1,35 @@
+<mat-toolbar>
+    <div>
+        <a [routerLink]="['/']" routerLinkActive="router-link-active" >{{appName}}</a>
+        <span class="fill-remaining-space"></span>
+    </div>
+    <div>
+        <a  [routerLink]="['/admin']" 
+            routerLinkActive="router-link-active"
+            *ngIf="authSvc.userData$ | async" >
+            <button mat-button>Admin</button>
+        </a>
+        
+        <a (click)="onLogout()"
+           routerLinkActive="router-link-active"
+           *ngIf="authSvc.userData$ | async; else showLogin" >
+            <button mat-button>Logout</button>
+        </a>
+        <a (click)="onCart()">
+            <mat-icon>add_shopping_cart</mat-icon>
+        </a>
+        
+        <ng-template #showLogin>
+            <a [routerLink]="['/login']" routerLinkActive="router-link-active" >
+                Ingresar
+            </a>
+        </ng-template>
+    </div>
+    
+    </mat-toolbar> 
+    <app-cart  *ngIf="openCart"
+                [totalPrice]="totalPrice"
+                [totalQuantity]="totalQuantity"
+                [products]="products"
+               (removeProductCart)="removeProductCart($event)" ></app-cart>   
+    

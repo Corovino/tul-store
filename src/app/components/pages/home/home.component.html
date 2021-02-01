@@ -1,0 +1,12 @@
+<div class="container" *ngIf="products  else Loading">
+    <mat-card class="post-card" *ngFor="let product of products">
+      <app-products [product]="product"
+                    (addCartProduct)="addCartProduct($event)"></app-products>
+    </mat-card>
+  </div>
+  
+  <ng-template #Loading>
+    <div class="container-spinner">
+      <mat-spinner></mat-spinner>
+    </div>
+</ng-template>

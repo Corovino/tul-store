@@ -1,0 +1,31 @@
+<mat-toolbar  class="navbar">
+    <div>
+      <a routerLink="/">
+        <img src="assets/img/logo-tul.png" alt="">
+      </a>
+    </div>
+    <div>
+      <span class="fill-remaining-space"></span>
+      <button mat-icon-button class="example-icon" [matMenuTriggerFor]="appMenu">
+        <mat-icon>account_circle</mat-icon>
+      </button>
+      <mat-menu #appMenu="matMenu">
+        <ng-template matMenuContent>
+          <button mat-menu-item (click)="logout()">Cerrar sesión</button>
+        </ng-template>
+      </mat-menu>
+    </div>
+  </mat-toolbar>
+  <mat-sidenav-container>
+    <mat-sidenav #sideNav [(opened)]="opened" mode="side">
+      <mat-nav-list>
+        <a mat-list-item routerLink="products"> <mat-icon>book</mat-icon>Products</a>
+      </mat-nav-list>
+  
+      <mat-divider></mat-divider>
+      
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>

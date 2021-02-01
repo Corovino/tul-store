@@ -1,0 +1,26 @@
+
+$default_white: whitesmoke;
+$default_black: #000;
+$file_white: #ccc;
+$card_background: #66636b;
+
+$button_purpure: #451e89;
+
+$tul_green: #00645082;
+$tul_gr_m: #115b56;
+$tul_gr_light: #e8e237;
+
+.button{
+    background: $tul_gr_light;
+    color: $tul_gr_m;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    display: block;
+    border: none;
+    border-radius: 3px;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 25px 0 15px 0;
+    width: 100%;
+}

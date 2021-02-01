@@ -1,0 +1,66 @@
+<mat-card>
+    <mat-card-title>
+      <img src="assets/img/logo-tul.png" alt="">
+    </mat-card-title>
+    <mat-card-content>
+      <form [formGroup]="registerForm" (ngSubmit)="onRegister(registerForm.value)">
+        <p>
+          <mat-form-field>
+            <input
+              type="text"
+              matInput
+              placeholder="Nombre"
+              formControlName="first_name"
+            />
+          </mat-form-field>
+          <mat-form-field>
+            <input
+              type="text"
+              matInput
+              placeholder="Apellido"
+              formControlName="last_name"
+            />
+          </mat-form-field>
+          <mat-form-field>
+            <input
+              type="text"
+              matInput
+              placeholder="Correo"
+              formControlName="email"
+            />
+          </mat-form-field>
+        </p>
+        <p>
+          <mat-form-field>
+            <input
+              type="password"
+              matInput
+              placeholder="Contraseña"
+              formControlName="password"
+            />
+          </mat-form-field>
+        </p>
+        <p>
+          <mat-form-field>
+            <input
+              type="password"
+              matInput
+              placeholder="Contraseña"
+              formControlName="password_confirmation"
+            />
+          </mat-form-field>
+        </p>
+        <button type="submit" class="button">Registrarse</button>
+        <div class="register">
+          <a  [routerLink]="['/login']" 
+          routerLinkActive="router-link-active" >
+             Ingresar
+          </a>
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+  
+  
+  
+  
